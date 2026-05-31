@@ -1,7 +1,7 @@
-/* Fixed typos */
 *{
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
   box-sizing: border-box; /* Added to keep dimensions accurate */
 }
 
@@ -10,23 +10,29 @@ header{
   background-image: url('https://t3.ftcdn.net/jpg/01/91/87/42/360_F_191874216_tsIiW1IzfVZFykipsiS8p9dhrSXrPf18.jpg');
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height to min-height to prevent content overflow */
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 nav{
   width: 100%;
-  height: 100px;
+  min-height: 100px; /* Changed from fixed height to allow expansion */
   color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap; /* Allows navigation to wrap on smaller tablet screens */
+  padding: 20px; /* Added fallback spacing */
 }
 
 .logo{
   font-size: 2em;
   letter-spacing: 2px;
   color: black;
+  display: flex;
+  align-items: center;
 }
 
 .menu a{
@@ -42,6 +48,7 @@ nav{
   border-radius: 5px;
   transition: 0.3s;
 }
+
 .Emergency a{
   text-decoration: none;
   color: black;
@@ -50,23 +57,27 @@ nav{
   padding: 10px;
   border-radius: 5px;
 }
+
+/* Made hero layout flexible using flexbox instead of absolute positioning */
 .hero{
+  width: 90%; /* Forces standard boundary margins on mobile devices */
   max-width: 650px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto; /* Centers perfectly in the remaining flex space */
+  padding: 40px 0;
   text-align: center;
   color: black;
 }
+
 .hero span{
   font-size: 1.2em;
   letter-spacing: 2px;
 }
+
 .hero h1{
   font-size: 3em;
   margin: 20px 0;
 }
+
 .hero p{
   font-size: 1.2em;
   line-height: 1.5;
@@ -81,4 +92,134 @@ nav{
   text-decoration: none;
   font-size: 1.2em;
   border-radius: 5px;
+}
+
+/* --- Mobile Breakpoint (Phones under 768px wide) --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stacks navigation vertical */
+    gap: 15px; /* Adds clean spacing between wrapped items */
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu a {
+    font-size: 16px; /* Shrinks links for mobile viewports */
+    padding: 8px;
+  }
+
+  .Emergency a {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 2.2em; /* Prevents long heading strings from truncating */
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.purpose {
+  margin-bottom: 60px;
+}
+
+.purpose h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.purpose p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+#team {
+  margin-bottom: 60px;
+}
+
+#team h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.team-member {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 24px;
+  transition: background 0.3s,transform 0.3s;
+}
+
+.team-member:hover {
+  background: #FDF6E3;
+  transform: translateY(-5px);
+}
+
+.team-member h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.team-member p {
+  font-size: 13px;
+  color: #888;
+
+}
+
+.Project {
+  margin-bottom: 60px;
+}
+
+.Project h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.fact-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.fact-card:hover {
+  background: #FDF6E3;
+  transform: translateY(-5px);
+}
+
+.fact-card h1 {
+  font-size: 42px;
+  color: #B22222;
+  margin-bottom: 8px;
+}
+
+.fact-card p {
+  font-size: 13px;
+  color: #666;
 }
