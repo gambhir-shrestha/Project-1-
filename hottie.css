@@ -1,0 +1,33 @@
+body{
+    background-color: #780606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px; /* curved edges */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: #780606;
+    color: #fff;
+    cursor: pointer;
+}
+
+div{
+    background-color: rgba(255, 255, 255, 0.41);
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px; 
+}
