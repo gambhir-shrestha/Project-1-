@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — Blood Donation</title>
+  <link rel="stylesheet" href="hottie.css">
+</head>
+<body>
+  <script src="omagooo.js"></script>
+     
+  <div class="register-container">
+    
+    <div class="left-panel">
+      <div class="logo">🩸 Blood Bridge</div>
+      <div class="slogan-box">
+        <h1>Donate Blood<br>Save <span>Loif.</span></h1>
+        <p>Your single donation can save up to three lives. Join our community of heroes today.</p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <h2>Create New Account</h2>
+      <p class="subtext">Please fill in your details to register as a donor.</p>
+
+      <form action="#" method="post">
+        <div class="field-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+
+        <div class="field-group">
+          <label for="Phone">Phone Number</label>
+          <input type="tel" id="Phone" name="Number" pattern="[0-9]{10}" maxlength="10" minlength="10" placeholder="10-digit mobile number" required>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div><br>  
+        <div class="form-row">
+          <div class="field-group">
+            <label for="blood-group">Blood Group</label>
+            <select id="blood-group" name="blood-group" required>
+              <option value="" disabled selected>Select</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>  
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" name="Weight" min="50" placeholder="Min 50kg" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="19" placeholder="Min 19" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit </button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
